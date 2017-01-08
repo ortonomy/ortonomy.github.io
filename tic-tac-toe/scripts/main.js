@@ -362,7 +362,7 @@
                     if ( cycle >= 0 ) {
                         cubes[index].style.transform = `translateZ(${cubes[index].offsetHeight * 1.2}px)`;
                         cubes[index].style.opacity = 1;
-                        cubes[index].style.backgroundImage = `url('../images/${title[8-cycle]}.svg')`;
+                        cubes[index].style.backgroundImage = `url('images/${title[8-cycle]}.svg')`;
                         Utils.timers.t.push(window.setTimeout(hello,250,cycle-1));
                     } else {
                         Utils.timers.t.forEach( (e) => window.clearTimeout(e) );
