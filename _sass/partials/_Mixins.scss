@@ -1,0 +1,20 @@
+$tiny-mobile: 410px;
+$desktop-width: 1024px;
+
+@mixin tiny {
+  @media (max-width: #{$tiny-mobile}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
