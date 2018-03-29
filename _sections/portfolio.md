@@ -4,7 +4,7 @@
 ## Projects & portfolio
 {: .content-title}
 
-<div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
+<div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-wrench"></i><span class="content-title-decorator"></span></div>
 
 **Boosting organizational memory and resource planning:** Working with freelancers means an inevitable level of flux in availability of quality talent. Teams with even a modest number of freelancer relationships find this data difficult to manage. So I started an open source project **fling.work**, the first 'freelancer relationship management' system. 
 
@@ -38,11 +38,11 @@
   alt9="speaking task teacher grading III"
 %}
 
-Students are asked to spontaneoulsy produce language they've been learning and teachers listen to the productio giving grades and specific feedback on their errors and areas for improvement.
+Students are asked to spontaneoulsy produce language they've been learning and teachers listen to the submitted audios giving grades and specific feedback on their errors and areas for improvement.
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
 
-**Centre of innovation:** as a product designer I was also part of a cross-functional to bring practice and examination of reading and writing onto the mobile platform. A real challenge given the affordance and constraints of mobile devices.
+**Centre of innovation:** as a product designer I was also part of a cross-functional team which innovated to breath life into the practice and examination of reading and writing on our iOS and Android apps. We achieved some elegant solutions using the affordances of touch devices.
 
 {% 
   include portfolio_images_2_by_3.html 
@@ -60,9 +60,11 @@ Students are asked to spontaneoulsy produce language they've been learning and t
   alt6="writing input example"
 %}
 
+We wanted students to have a comfortable experience scrolling through a reading text, allowing a scrollable text area closer their thumbs. For the writing experience, we wanted to minimise the number of words actually typed by students, given the combined effect of low fluency and low observed words per minute speeds with mobile text input.
+
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-code"></i><span class="content-title-decorator"></span></div>
 
-**Creativity and code:** A collection of my software development projects built for [Free Code Camp](https://freecodecamp.com/){: target="blank"}
+**Creativity and code:** Here is a select of software development projects built for [Free Code Camp](https://freecodecamp.com/){: target="blank"} and for my own learning and investigation into what can be done with CSS and Javascript:
 
 {% 
   include portfolio_images_1_by_3.html 

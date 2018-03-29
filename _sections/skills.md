@@ -16,7 +16,7 @@
 {% include skills-image.html src="assets/images/planner.svg" alt="mobile device icon" delay="0" %}
 
 {::options parse_block_html="true" /}
-**I can manage it.** I facilitate commmunication between cross-functional teams with ease, helping stakeholders, engineers, and designers define vision and value, by talking in their language.
+**I can manage it.** I facilitate commmunication between cross-functional teams with ease, helping stakeholders, engineers, and designers define the vision and agree on key metrics for value.
 </div>
 
 <div class="content-column">

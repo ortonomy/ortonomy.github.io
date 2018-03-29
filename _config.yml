@@ -28,11 +28,33 @@ exclude:
 
 # Build settings
 markdown: kramdown
-theme:
 plugins:
   - jekyll-pug
 
+# collections
 collections:
   sections:
     output: false
 
+# github settings  - user
+github: [metadata]
+repository: <USERNAME>/<PROJECT>
+encoding: UTF-8
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
+theme:
+gfm_quirks: paragraph_end
+
+# github settings - system
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
