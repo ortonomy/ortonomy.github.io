@@ -25,6 +25,7 @@ exclude:
   - dev
   - .tern-project
   - .DS_Store
+  - design/
 
 # Build settings
 markdown: kramdown
