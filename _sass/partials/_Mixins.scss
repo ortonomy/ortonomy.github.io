@@ -1,5 +1,12 @@
+$deprecated-mobile: 340px;
 $tiny-mobile: 410px;
 $desktop-width: 1024px;
+
+@mixin tinytiny {
+  @media (max-width: #{$deprecated-mobile}) {
+    @content;
+  }
+}
 
 @mixin tiny {
   @media (max-width: #{$tiny-mobile}) {

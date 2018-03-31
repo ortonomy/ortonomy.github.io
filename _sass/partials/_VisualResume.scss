@@ -116,6 +116,12 @@ article.container {
         font-size: 3.8em;
         letter-spacing: .1em;
         text-transform: uppercase;
+
+        @include tinytiny {
+          &.title {
+            font-size: 2.4em;
+          }
+        }
       }
 
       h2 {
@@ -129,6 +135,8 @@ article.container {
       h3, p {
         font-size: 2em; 
       }
+
+
     }
   }
 }
