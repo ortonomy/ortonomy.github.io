@@ -1536,6 +1536,10 @@ p { font-family: Adelle, Georgia, serif; font-size: 1.6em; }
 .all-content .dark { background-color: #111111; color: #eee; }
 .all-content .dark .content-title-decorator { border: 0.05em solid #eee; }
 
+/* author: @ortonomy date: April 2018
+ Visual Resume styles for personal site
+
+*/
 article.container { display: flex; flex-direction: column; justify-content: center; align-items: center; }
 article.container section.row.divider, article.container section.row.entry { display: flex; justify-content: center; align-items: stretch; position: relative; }
 @media (max-width: 1023px) { article.container section.row.divider, article.container section.row.entry { flex-direction: column; } }
@@ -1548,7 +1552,7 @@ article.container section.row.divider .center.line .entry-icon, article.containe
 article.container section.row.divider.icon .center, article.container section.row.entry.icon .center { display: flex; justify-content: center; align-items: center; background-color: #FFF; color: #000; font-size: 2em; padding: .85rem 1rem; }
 article.container section.row.divider .left.details, article.container section.row.divider .right.details, article.container section.row.entry .left.details, article.container section.row.entry .right.details { flex: 1 40%; padding: 0 2rem 2rem; margin: 2rem; position: relative; }
 @media (max-width: 1023px) { article.container section.row.divider .left.details, article.container section.row.divider .right.details, article.container section.row.entry .left.details, article.container section.row.entry .right.details { margin-top: 0; } }
-article.container section.row.divider .left.details p, article.container section.row.divider .right.details p, article.container section.row.entry .left.details p, article.container section.row.entry .right.details p { margin: 1.5rem 0 0; z-index: 2; position: relative; padding: 1rem 2rem 0; }
+article.container section.row.divider .left.details p, article.container section.row.divider .right.details p, article.container section.row.entry .left.details p, article.container section.row.entry .right.details p { margin: 1.5rem 0 0; z-index: 2; position: relative; padding: 2rem 2rem; }
 @media (max-width: 1023px) { article.container section.row.divider .left.details p, article.container section.row.divider .right.details p, article.container section.row.entry .left.details p, article.container section.row.entry .right.details p { margin: 0; } }
 article.container section.row.divider .left.details p::after, article.container section.row.divider .right.details p::after, article.container section.row.entry .left.details p::after, article.container section.row.entry .right.details p::after { content: ''; left: 0; top: 0; display: block; position: absolute; width: 100%; height: 100%; background-color: rgba(74, 144, 226, 0.5); z-index: -1; transform: rotate(-1deg); box-shadow: 0 0 1em -0.3em #4a90e2; }
 article.container section.row.divider .left.role, article.container section.row.divider .right.role, article.container section.row.entry .left.role, article.container section.row.entry .right.role { flex: 1 40%; padding: 2rem; margin: 2rem; }
