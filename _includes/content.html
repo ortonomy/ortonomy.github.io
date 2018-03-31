@@ -3,16 +3,24 @@
   <header class="content-header-main">
     <h1 class="header-text">Let's build nice things.</h1>
     <div>
-      <button class="download-resume">Download my résumé</button>
+      <a href="./assets/pdfs/resume_gregoryorton_201801_website.pdf"><button class="download-resume">Download my résumé</button></a>
     </div>
   </header>
-  <article class="content-section ">
+  <article class="content-section " id="about">
     {{ site.sections[0] }}
   </article>
   <article class="content-section dark">
     {{ site.sections[2] }}
   </article>
-  <article class="content-section golden">
+  <article class="content-section golden" id="portfolio">
     {{ site.sections[1] }}
   </article>
+  <article class="content-section" id="experience">
+    {{ site.sections[3] }}
+  </article>
+  <footer class="content-section dark">
+    <div>
+      <p class="content-title-sub">&copy; Gregory Orton, 2018</p>
+    </div>
+  </footer>
 </section>
