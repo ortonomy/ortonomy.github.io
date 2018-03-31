@@ -21,7 +21,7 @@
     align-items: center;
     background: radial-gradient(ellipse farthest-side at 50% 0, $background-pure 0%, $bacground-secondary 100%), url('../images/cityscape.svg') no-repeat;
     background-color: $background-pure;
-    background-position: top center;
+    background-position: bottom 25% center;
     background-size: cover;
     display: grid;
     flex-direction: column;
@@ -131,14 +131,16 @@
     }
 
     a {
-      color: $text-link;
+      color: $text-secondary;
       outline: none;
       position: relative;
       text-decoration: none;
+      z-index:2;
+      padding: .2rem 1rem;
     }
 
     a::after {
-      background-image: linear-gradient(to right, $text-link-highlight 0%, $text-link-highlight 100%);
+      background-image: linear-gradient(to right, $text-link 0%, $text-link 100%);
       content: '';
       height: 100%;
       left: 0;
@@ -146,6 +148,7 @@
       top: 0;
       transform: rotate(-1deg);
       width: 100%;
+      z-index: -1;
     }
 
     .portfolio-image-container_2by3 {
