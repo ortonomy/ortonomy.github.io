@@ -9,64 +9,88 @@
 
 AOS.init({});
 
+// Accessible smooth link scrolling 
+// polyfill provided by CSS Tricks:  https://css-tricks.com/snippets/jquery/smooth-scrolling/
+// modified by @ortonomy to incorporate navigational changes
 
-// Custom behaviors
+const linkChange = function (event) {
+  if ( // On-page links
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+      let target = $(this.hash); // Figure out element to scroll to
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-( () => {
-  // big images
-  const imageHolders = document.querySelectorAll('.portfolio-image');
-  const images = document.querySelectorAll('.portfolio-real-image');
-  const altText = document.querySelectorAll('.portfolio-image-popout');
+      const $this = $(this);
+    
+      if (target.length) { // Does a scroll target exist?
+        event.preventDefault();  // Only prevent default if animation is actually gonna happen
+        $('html, body').animate({ // animate the scroll
+        scrollTop: target.offset().top
+        }, 1000, () => { // Callback after animation
 
-  imageHolders.forEach ( (el, i) => {
-    el.addEventListener('mouseenter', function imageHoverEnter(e) {
-      altText[i].style.top = '0';
-      altText[i].style.left = '0';
-      altText[i].style.height = (el.offsetHeight - 4) + 'px';
-      altText[i].style.width = el.offsetWidth + 'px';
-      setTimeout ( () => (altText[i].innerHTML = `<p class="portfolio-image-popover-text"> ${images[i].getAttribute('alt')} </p>`), 300);
-    }, false);
+          // deal with navigational changes
 
-    el.addEventListener('mouseleave', function imageHoverLeave(e) {
-      altText[i].innerHTML = '' ;
-      altText[i].style.height = '0';
-      altText[i].style.width = '0';
-      altText[i].style.top = '50%';
-      altText[i].style.left = '50%'; 
-    });
-  });
- 
-  // x 3 image rows
-  const imageHolders23 = document.querySelectorAll('.portfolio-image_2by3 > a');
-  const altText23 = document.querySelectorAll('.portfolio-image-popout_2by3');
+          // remove active class from all
+          $('a[href*="#"]')
+          .not('[href="#"]') // remove non-linking links
+          .not('[href="#0"]')
+          .each( (i, el) => { // for each element
+            $(el).find('li').first().removeClass('active'); // remove the active class
+          })
+      
+          // add back necessary classes
+          $this.find('li').first().addClass('active'); // add class back to the new element
+          $this.siblings('.active-marker').css('top',`${$this[0].offsetTop}px`); // move the marker
+          
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ( $target.is(":focus") ) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+        
+      }
+  }
 
-  // imageHolders23.forEach ( (el, i) => {
-  //   el.addEventListener('mouseenter', function images23HoverEnter(e) {
-  //     altText23[i].style.height = e.target.offsetHeight + 'px';
-  //     altText23[i].style.width = e.target.offsetWidth + 'px';
-  //   });
-  // })
-  // const images23 = document.querySelectorAll('.portfolio-real-image_2by3');
-  // const altText23 = document.querySelectorAll('.portfolio-image-popout_2by3');
+}
 
-  // imageHolders23.forEach ( (el, i) => {
-  //   el.addEventListener('mouseenter', function image23HoverEnter(e) {
-  //     altText23[i].style.top = '0'
-  //     altText23[i].style.left = '-' + (el.offsetWidth) + 'px';
-  //     altText23[i].style.height = el.offsetHeight + 'px';
-  //     altText23[i].style.width = el.offsetWidth + 'px';
-  //     setTimeout ( () => (altText23[i].innerHTML = `<p class="portfolio-image-popover-text"> ${images23[i].getAttribute('alt')} </p>`), 300);
-  //   }, false);
+$('a[href*="#"]')
+.not('[href="#"]') // remove non-linking links
+.not('[href="#0"]')
+.click( linkChange );
 
-  //   el.addEventListener('mouseleave', function image23HoverLeave(e) {
-  //     altText23[i].innerHTML = '' ;
-  //     altText23[i].style.height = '0';
-  //     altText23[i].style.width = '0';
-  //     altText23[i].style.top = '50%';
-  //     altText23[i].style.left = '50%'; 
-  //   });
-  // });
+const anchorScrollToView = function () {
+  const element = this.element.id;
+  const $link = $(`a[href="#${element}"]`);
+  const $marker = $link.siblings('.active-marker');
+  
+  // remove active class from all
+  $('a[href*="#"]')
+  .not('[href="#"]') // remove non-linking links
+  .not('[href="#0"]')
+  .each( (i, el) => { // for each element
+    $(el).find('li').first().removeClass('active'); // remove the active class
+  })
 
-  // smaller images
+  // add the active class back to scrolled to element
+  $link.find('li').first().addClass('active');
+  // move the marker
+   $marker.css('top',`${$link[0].offsetTop}px`);
 
-})()
+}
+
+$('article#about').waypoint(anchorScrollToView);
+$('article#portfolio').waypoint(anchorScrollToView);
+$('article#experience').waypoint(anchorScrollToView);
+
+
+
+
+
+

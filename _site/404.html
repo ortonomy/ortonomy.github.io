@@ -46,8 +46,9 @@
         </div>
         <nav class="sidebar-nav">
             <ul>
-                <a href="#"><li data-key="1" class="active">About</li></a>
-                <a href="#"><li data-key="2">Portfolio</li></a>
+                <a href="#about"><li data-key="1" class="active">About</li></a>
+                <a href="#portfolio"><li data-key="2">Portfolio</li></a>
+                <a href="#experience"><li data-key="2">Experience</li></a>
                 <a href="https://medium.com/@ortonomy" target="_blank"><li data-key="3">Blog</li></a>
                 <div class="active-marker"></div>
             </ul>
@@ -66,10 +67,10 @@
   <header class="content-header-main">
     <h1 class="header-text">Let's build nice things.</h1>
     <div>
-      <button class="download-resume">Download my résumé</button>
+      <a href="./assets/pdfs/resume_gregoryorton_201801_website.pdf"><button class="download-resume">Download my résumé</button></a>
     </div>
   </header>
-  <article class="content-section ">
+  <article class="content-section " id="about">
     <h2 class="content-title" id="hi-there">Hi there!</h2>
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-commenting-o"></i><span class="content-title-decorator"></span></div>
@@ -116,7 +117,7 @@
 
 
   </article>
-  <article class="content-section golden">
+  <article class="content-section golden" id="portfolio">
     <h2 class="content-title" id="projects--portfolio">Projects &amp; portfolio</h2>
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
@@ -260,11 +261,68 @@
 
 
   </article>
+  <article class="content-section" id="experience">
+    <h2 class="content-title">Experience & Education</h2>
+<div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-briefcase"></i><span class="content-title-decorator"></span></div>
+<p><strong>All these things that I've done</strong> - a visual history of my work experience and time spent gaining valuable skills</p>
+<template id="divider">
+  <section class="row divider">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </section>
+</template>
+<template id="divider-icon">
+  <section class="row divider icon">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </section>
+</template>
+<template id="entry-start-left">
+  <section class="row entry left">
+    <div class="left role"> 
+      <h1 class="title"> </h1>
+      <h2 class="company"></h2>
+      <h3 class="location"></h3>
+      <p class="date"></p>
+    </div>
+    <div class="center line"></div>
+    <div class="right details">
+      <p class="description"></p>
+    </div>
+  </section>
+</template>
+<template id="entry-start-right">
+  <section class="row entry right">
+    <div class="left details"> 
+      <p class="description"></p>
+    </div>
+    <div class="center line"></div>
+    <div class="right role">
+      <h1 class="title"> </h1>
+      <h2 class="company"></h2>
+      <h3 class="location"></h3>
+      <p class="date"></p>
+    </div>
+  </section>
+</template>
+<article class="container"></article>
+<script src="assets/scripts/visual_resume.js"></script>
+  </article>
+  <footer class="content-section dark">
+    <div>
+      <p class="content-title-sub">&copy; Gregory Orton, 2018</p>
+    </div>
+  </footer>
 </section>
+
     </body>
 
     <!-- vendor scripts -->
+    <script src="/assets/scripts/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="/assets/scripts/vendor/aos/aos.js"></script>
+    <script src="/assets/scripts/vendor/waypoints/jquery.waypoints.min.js"></script>
 <!-- end vendor scripts -->
 
 <!-- app scripts -->
