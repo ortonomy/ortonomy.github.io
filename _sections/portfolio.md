@@ -6,15 +6,15 @@
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
 
-**Boosting organizational memory and resource planning:** Working with freelancers means an inevitable level of flux in availability of quality talent. Teams with even a modest number of freelancer relationships find this data difficult to manage. So I started an open source project **fling.work**, the first 'freelancer relationship management' system. 
+**Boosting organizational memory and resource planning:** Working with freelancers means an inevitable level of flux in availability of quality talent. Teams with even a modest number of freelancer relationships find this data difficult to manage. To solve this, I started **fling.work**, the first 'freelancer relationship management' system. 
 
 {% include portfolio-image.html src1="assets/images/fling_shot.png" alt1="fling.work landing page" src2="assets/images/fling_shot_2.png" alt2="fling.work freelancer data" delay="0" %}
 
-**Open source & collaborative:** I have opened sourced the project on [GitHub](https://github.com/ortonomy/flingapp-frontend){: target="blank"}. It's developed with one full-time collaborator and several other freelancer developers and tech enthusiasts from a Shanghai local coding collective and freelancer organization called [Coderbunker](https://coderbunker.com/){: target="blank"}.
+**Open-source & collaborative:** I have open-sourced the app on [GitHub](https://github.com/ortonomy/flingapp-frontend){: target="blank"}. It's developed with one full-time collaborator and several other freelance developers and tech enthusiasts from a Shanghai-local coding collective called [Coderbunker](https://coderbunker.com/){: target="blank"}.
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
 
-**Fixing the oldest problem:** In digital education, the biggest barrier to learning is the lack of opportunity to practice and test speaking. We fixed that for mobile users, by creating a new decision-based speaking activity with asynchronous teacher grading and feedback.
+**Fixing the oldest problem:** In digital language instruction, the biggest barrier to learning is the lack of opportunity to practice and test speaking. We fixed that for mobile users, by creating a new decision-based speaking activity with asynchronous teacher grading and feedback.
 
 {% 
   include portfolio_images_3_by_3.html 
@@ -38,11 +38,11 @@
   alt9="speaking task teacher grading III"
 %}
 
-Students are asked to spontaneoulsy produce language they've been learning and teachers listen to the productio giving grades and specific feedback on their errors and areas for improvement.
+Students are asked to spontaneously produce language they've been learning and teachers listen to the production giving grades and specific feedback on their errors and areas for improvement.
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-pencil"></i><span class="content-title-decorator"></span></div>
 
-**Centre of innovation:** as a product designer I was also part of a cross-functional to bring practice and examination of reading and writing onto the mobile platform. A real challenge given the affordance and constraints of mobile devices.
+**Centre of innovation:** as a product designer and part of a cross-functional team, we innovated to bring practice and examination of reading and writing onto the mobile platform. A real challenge given the affordance and constraints of mobile devices.
 
 {% 
   include portfolio_images_2_by_3.html 
@@ -62,7 +62,7 @@ Students are asked to spontaneoulsy produce language they've been learning and t
 
 <div class="content-title-sub"><span class="content-title-decorator"></span><i class="fa fa-code"></i><span class="content-title-decorator"></span></div>
 
-**Creativity and code:** A collection of my software development projects built for [Free Code Camp](https://freecodecamp.com/){: target="blank"}
+**Creativity and code:** A collection of my software development projects built for [FreeCodeCamp](https://freecodecamp.com/){: target="blank"}
 
 {% 
   include portfolio_images_1_by_3.html 

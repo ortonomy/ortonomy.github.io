@@ -125,7 +125,7 @@
       line-height: $text-line-height-large;
       padding: .5em 2em;
 
-      @include tiny {
+      @include mobile {
         padding: 1em .5em;
       }
     }
@@ -256,10 +256,7 @@
 
       @include mobile {
         columns: unset;
-      }
-
-      @include tiny {
-        columns: unset;
+        padding: 0 1em;
       }
 
       .content-column {
