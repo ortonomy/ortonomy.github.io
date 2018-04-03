@@ -129,3 +129,125 @@
 
   }
 }
+
+.mobile-navigation {
+  position: fixed;
+  display: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: $text-primary;
+  border-radius: 50%;
+  z-index: 100;
+  @include shadow(2, $text-primary);
+  border: .1rem solid $text-secondary;
+
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 3.5rem;
+    bottom: 3.5rem;
+  }
+
+  & .mob-nav-text {
+    display: none;
+    transition: all .2s ease-in;
+  }
+
+  &::before, &::after {
+    transition: all .2s ease-in-out;
+    content: '';
+    width: .2rem;
+    height: 1.5rem;
+    background-color: $text-secondary;
+    position: absolute;
+    z-index: 101;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  .mob-nav-group {
+    display: none;
+    transition: all .2s ease-in;
+    position: absolute;
+    top: calc(2.4 * -4.8rem);
+    right: -2.5rem;
+
+    .mob-nav-item {
+      transition: all .2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      width: 10rem;
+      height: 2rem;
+      background-color: $text-primary;
+      color: $text-secondary;
+      border-radius: 2.5rem;
+      font-family: $title-text-sans;
+      margin: .2rem 0;
+      @include shadow(4, $text-primary);
+      z-index: 100;
+      border: .1rem solid $text-secondary;
+
+      a {
+        flex: 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $text-secondary;
+
+        span {
+          text-align: center;
+          flex: 1 100%;
+          font-size: $text-size-small;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &.open {
+    @include shadow(4, $text-primary);
+    
+    & .mob-nav-text {
+      display: block;
+      color: $text-secondary;
+      text-transform: uppercase;
+      font-family: $title-text-sans;
+      font-size: $text-size-small;
+    }
+
+    &::before, &::after {
+      content: '';
+      width: .2rem;
+      height: 2.2rem;
+      background-color: $text-secondary;
+      position: absolute;
+      z-index: 101;
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      top: .5rem;
+    }
+
+    &::after {
+      bottom: .5rem;
+    }
+
+    .mob-nav-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+  }
+
+  
+
+  // @for $var from <start> through <end>
+}

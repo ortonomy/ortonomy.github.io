@@ -90,7 +90,11 @@ $('article#portfolio').waypoint(anchorScrollToView);
 $('article#experience').waypoint(anchorScrollToView);
 
 
-
+// mobile navigation control
+$('.mobile-navigation')
+.click( function (e) {
+  $(this).toggleClass('open');
+})
 
 
 
