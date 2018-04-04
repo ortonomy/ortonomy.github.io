@@ -25,7 +25,11 @@ exclude:
   - dev
   - .tern-project
   - .DS_Store
-  - design/
+  - design
+
+keep_files:
+  - .git
+  - .gitignore
 
 # Build settings
 markdown: kramdown
