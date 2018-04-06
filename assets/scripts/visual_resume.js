@@ -31,7 +31,7 @@ const content = [
       organization: 'EF Education First',
       location: 'Shanghai, China',
       date: ['September 2016','April 2018'],
-      description: 'Improve, enhance, and maintain business criticla content delivery services and systems for the digital classroom and digital learning materials.',
+      description: 'Improve, enhance, and maintain business critical content delivery services and systems for the digital classroom and digital learning materials.',
       icon: 'code'
     }
   },
@@ -91,7 +91,7 @@ const content = [
       organization: 'University of Reading',
       location: 'Reading, United Kingdom',
       date: ['October 2002','June 2005'],
-      description: '3-year undegraduate degree. Awarded a Bachelor of Science with Honours.',
+      description: '3-year undergraduate degree. Awarded a Bachelor of Science with Honours.',
       icon: 'graduation-cap'
     }
   },
